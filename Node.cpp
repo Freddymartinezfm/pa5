@@ -16,7 +16,8 @@ Node::Node(int d, int w, Node *nextNode = nullptr){
 }
 
 Node::Node(Node *n){
-	// Log::m(TAG, "Node(string, Node*)", this);
+	// Log::m(TAG, "Node(string, Node*)", this); copy constructor
+
 	data = new Edge(n->data->key, n->data->weight);
 }
 
