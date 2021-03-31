@@ -6,6 +6,78 @@
 #include <fstream>
 #include <string>
 
+
+void Graph::iterative_deepening(){
+	std::cout << std::endl;
+	std::cout << "===== Iterative Deepening DFS =====" << std::endl;	
+	list w =  successors(14);
+	// w.display();
+
+	std::cout << "data: " <<  w.head->data->get_key() << "\n";
+	std::cout << "weight: " <<  w.head->data->get_weight();
+
+
+		
+}
+
+void Graph::iterative_dfs_from_vertex(Graph &G, int u) {
+
+
+		/* code */
+	
+}
+
+
+list Graph::successors(int index){
+	list succ;
+	return *vertices[index];
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * expierementation above
+ * @brief pa5 below
+ */
+
 Graph::Graph()
 {}
 

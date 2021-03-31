@@ -11,6 +11,7 @@
 class Node {
 private:
 	Edge *data;
+	
 	Node *next;
 public:
 	Node();

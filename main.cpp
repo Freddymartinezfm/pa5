@@ -25,38 +25,43 @@ void begin(int argc, char ** argv){
 	Graph graph;
 	if (argc == 1) menu(1);	
 	else if (argc == 2) graph.read(std::string(argv[1]));
+	if (argc == 5) graph.read("test.txt");;	
 
 	// R1 & R2
 	graph.display();
+			graph.iterative_deepening();
+
 
 	try {
 		// R3
-		std::cout << "===== R3 - shortest paths from node 1 to all the other nodes ===== " << std::endl; 
-		graph.dijkstra(1);
+		// std::cout << "===== R3 - shortest paths from node 1 to all the other nodes ===== " << std::endl; 
+		// graph.dijkstra(1);
 		
-		// R4
-		std::cout << "\n===== R4 - minimum spanning tree with the starting node 1 =====" << std::endl;
-		graph.prims(1);
+		// // R4
+		// std::cout << "\n===== R4 - minimum spanning tree with the starting node 1 =====" << std::endl;
+		// graph.prims(1);
 			
-		// R5
-		std::cout << "\n===== R5 =====" << std::endl;
-		graph.cut_link(2,4);
-		graph.dijkstra(1);
+		// // R5
+		// std::cout << "\n===== R5 =====" << std::endl;
+		// graph.cut_link(2,4);
+		// graph.dijkstra(1);
 
-		// R6
-		std::cout << "\n===== R6 =====" << std::endl;
-		graph.cut_link(2,4);
-		graph.prims(1);
+		// // R6
+		// std::cout << "\n===== R6 =====" << std::endl;
+		// graph.cut_link(2,4);
+		// graph.prims(1);
 
 
 
-		// R7 BFS
-		graph.bfs();
+		// // R7 BFS
+		// graph.bfs();
 
-		graph.reset();
+		// graph.reset();
 
-		// R8 DFS
-		graph.dfs();
+		// // R8 DFS
+		// graph.dfs();
+
+		
 
 
 	} catch (int &s) {

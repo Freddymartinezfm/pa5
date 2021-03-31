@@ -11,6 +11,7 @@ private:
 	int key;
 	int weight;
 	
+	
 public:
 	Edge();
 	Edge(int, int);

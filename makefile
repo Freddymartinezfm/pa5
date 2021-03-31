@@ -1,12 +1,12 @@
-TARGET = pa5
+TARGET = a.exe
 FLAGS = -g #-fno-stack-protector
 CC = g++
-TYPE = l
+TYPE = w
 
-HEADER =  Edge.h  Edge.h Graph.h Node.h Graph.h list.h IntFiniteQueue.h
+HEADER =   Edge.h  Edge.h Graph.h Node.h Graph.h list.h IntFiniteQueue.h
 OBJ = main.o  Edge.o  Node.o list.o Graph.o IntFiniteQueue.o
 
-$(TARGET): $(OBJ) 
+$(TARGET): clean $(OBJ) 
 	$(CC) $(FLAGS)  $(OBJ) -o $(TARGET)
 main.o: main.cpp list.h 
 	$(CC) $(FLAGS) -c main.cpp

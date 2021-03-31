@@ -23,12 +23,14 @@ public:
 	void prims(int s);
 	void print_paths(int [], int);
 	void cut_link(int, int);
+	void iterative_deepening();
 private:
 	State state[14];
 	int w(Node *) const;
 	int *parent;
 	void order(int []);
 	void dfs_from_vertex(Graph&, int);
+	void iterative_dfs_from_vertex(Graph&, int);
 	void sort_from_vertex(Graph&, int);
 	void dijkstra(Graph&, int);
 	void prims(Graph&, int);
@@ -42,6 +44,8 @@ private:
 	double node_degree;
 	void relax(Node *, Node *, int);
 	void relax(int, int, int);
+	list successors(int index);
+
 	
 	friend class Entry;
 };
