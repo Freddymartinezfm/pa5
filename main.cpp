@@ -29,7 +29,10 @@ void begin(int argc, char ** argv){
 
 	// R1 & R2
 	graph.display();
-			graph.iterative_deepening();
+	// graph.iterative_deepening();
+
+
+	graph.dfs();
 
 
 	try {
